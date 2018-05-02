@@ -9,15 +9,16 @@ class HomeController < ApplicationController
     @ability =''
     
     
-    if @result == 1
+    case @result
+      when 1 
       @ability = "<떡락중>"
-      elsif @result == 2
+      when 2
       @ability = "<존버중>"
-      elsif @result == 3
+      when 3
       @ability = "<중타치>"
-      elsif @result ==4 
+      when 4 
       @ability = "<상타치>"
-      elsif @result ==5
+    else
       @ability = "<떡상중>"
     end
       
